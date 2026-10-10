@@ -131,7 +131,7 @@ export default function BookingDetailPage() {
             <span>{booking.location_city as string}</span>
           </div>
         </div>
-        {booking.notes && (
+        {Boolean(booking.notes) && (
           <p className="mt-3 text-sm text-text-secondary border-t border-border pt-3">
             <span className="font-medium">Notes:</span> {booking.notes as string}
           </p>
@@ -185,7 +185,7 @@ export default function BookingDetailPage() {
       </div>
 
       {/* Worker info */}
-      {booking.worker && (
+      {Boolean(booking.worker) && (
         <div className="card">
           <h2 className="section-title">{t('booking.assignedWorker', lang)}</h2>
           <div className="flex items-center gap-4">
@@ -199,7 +199,7 @@ export default function BookingDetailPage() {
                 <span className="text-xs text-cooperative font-semibold">Verified</span>
                 <span className="text-xs text-text-secondary">•</span>
                 <span className="text-xs text-text-secondary">
-                  ★ {(booking.worker as Record<string, unknown>).rating_avg as number} ({(booking.worker as Record<string, unknown>).rating_count} ratings)
+                  ★ {(booking.worker as Record<string, unknown>).rating_avg as number} ({(booking.worker as Record<string, unknown>).rating_count as number} ratings)
                 </span>
               </div>
               <p className="text-xs text-text-secondary mt-0.5">{(booking.worker as Record<string, unknown>).cooperative_name as string}</p>

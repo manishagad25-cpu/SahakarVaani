@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { authApi } from '../services/api';
 
 interface User {
@@ -9,6 +10,7 @@ interface User {
   role: string;
   preferred_language: string;
   is_active: boolean;
+  created_at?: string;
 }
 
 interface AuthCtx {

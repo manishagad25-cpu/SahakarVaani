@@ -73,7 +73,7 @@ export default function WorkerProfilePage() {
                 <div>
                   <p className="font-medium text-navy text-sm">{s.service_category_name_en as string}</p>
                   {isTamil && <p className="font-tamil text-xs text-text-secondary">{s.service_category_name_ta as string}</p>}
-                  {s.certification_note && <p className="text-xs text-text-secondary">{s.certification_note as string}</p>}
+                  {Boolean(s.certification_note) && <p className="text-xs text-text-secondary">{s.certification_note as string}</p>}
                 </div>
                 <div className="text-right flex-shrink-0">
                   <span className="text-xs font-semibold text-cooperative">{s.experience_years as number} yrs exp</span>

@@ -99,7 +99,7 @@ export default function RatingsDisputesPage() {
                     </span>
                   </div>
                   <p className="text-sm text-text-secondary mb-3">{d.description as string}</p>
-                  {d.resolution_notes && (
+                  {Boolean(d.resolution_notes) && (
                     <div className="p-3 bg-green-50 border border-green-200 rounded-btn text-xs">
                       <span className="font-semibold text-success">Resolution: </span>
                       <span className="text-text-secondary">{d.resolution_notes as string}</span>

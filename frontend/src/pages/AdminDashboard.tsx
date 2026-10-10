@@ -70,11 +70,11 @@ export default function AdminDashboard() {
       {/* KPI Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
         {[
-          { label: 'Total Workers', ta: 'மொத்த தொழிலாளர்கள்', value: metrics?.total_workers, icon: Users, color: 'text-navy' },
-          { label: 'Verified', ta: 'சரிபார்க்கப்பட்டவர்கள்', value: metrics?.verified_workers, icon: CheckCircle, color: 'text-success' },
-          { label: 'Active Bookings', ta: 'செயலில் முன்பதிவுகள்', value: metrics?.active_bookings, icon: Clock, color: 'text-info' },
-          { label: 'Completed Jobs', ta: 'முடிந்த வேலைகள்', value: metrics?.completed_jobs, icon: TrendingUp, color: 'text-cooperative' },
-          { label: 'Pending Disputes', ta: 'நிலுவை புகார்கள்', value: metrics?.pending_disputes, icon: AlertTriangle, color: 'text-warning' },
+          { label: 'Total Workers', ta: 'மொத்த தொழிலாளர்கள்', value: metrics?.total_workers as React.ReactNode, icon: Users, color: 'text-navy' },
+          { label: 'Verified', ta: 'சரிபார்க்கப்பட்டவர்கள்', value: metrics?.verified_workers as React.ReactNode, icon: CheckCircle, color: 'text-success' },
+          { label: 'Active Bookings', ta: 'செயலில் முன்பதிவுகள்', value: metrics?.active_bookings as React.ReactNode, icon: Clock, color: 'text-info' },
+          { label: 'Completed Jobs', ta: 'முடிந்த வேலைகள்', value: metrics?.completed_jobs as React.ReactNode, icon: TrendingUp, color: 'text-cooperative' },
+          { label: 'Pending Disputes', ta: 'நிலுவை புகார்கள்', value: metrics?.pending_disputes as React.ReactNode, icon: AlertTriangle, color: 'text-warning' },
         ].map(({ label, ta, value, icon: Icon, color }) => (
           <div key={label} className="stat-card">
             <div className="flex items-center justify-between mb-1">

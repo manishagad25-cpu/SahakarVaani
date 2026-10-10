@@ -159,7 +159,7 @@ export default function FairAllocationPage() {
                       <p>Jobs: {((matchResult.nearest_available_top as Record<string, unknown>).worker as Record<string, unknown>).completed_jobs as number}</p>
                     </div>
                   </div>
-                  {matchResult.fairness_improvement_desc && (
+                  {Boolean(matchResult.fairness_improvement_desc) && (
                     <p className="text-xs text-text-secondary mt-2 p-2 bg-white rounded-btn border border-border">
                       {matchResult.fairness_improvement_desc as string}
                     </p>
@@ -190,7 +190,7 @@ export default function FairAllocationPage() {
                               <div>
                                 <p className="font-semibold text-navy text-sm">
                                   {worker.full_name as string}
-                                  {cand.is_recommended && <span className="ml-2 badge-verified text-[10px]">Recommended</span>}
+                                  {Boolean(cand.is_recommended) && <span className="ml-2 badge-verified text-[10px]">Recommended</span>}
                                 </p>
                                 <p className="text-xs text-text-secondary">{worker.completed_jobs as number} total jobs</p>
                               </div>

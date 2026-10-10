@@ -176,7 +176,7 @@ export default function WelfarePage() {
                 </div>
               </div>
               <p className="text-sm text-text-secondary mb-3">{c.description as string}</p>
-              {c.admin_notes && (
+              {Boolean(c.admin_notes) && (
                 <div className="p-3 bg-background border border-border rounded-btn text-xs">
                   <span className="font-semibold text-navy">Admin notes: </span>
                   <span className="text-text-secondary">{c.admin_notes as string}</span>

@@ -47,12 +47,12 @@ export default function FederationDashboard() {
       {/* Federation totals */}
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
         {[
-          { label: 'Total Workers', value: totals.total_workers, icon: Users, color: 'text-navy' },
-          { label: 'Verified', value: totals.verified_workers, icon: CheckCircle, color: 'text-success' },
-          { label: 'Total Bookings', value: totals.total_bookings, icon: TrendingUp, color: 'text-info' },
-          { label: 'Completed', value: totals.completed_bookings, icon: CheckCircle, color: 'text-cooperative' },
-          { label: 'Revenue (₹)', value: `₹${(totals.total_earnings as number || 0).toFixed(0)}`, icon: CreditCard, color: 'text-cooperative' },
-          { label: 'Disputes', value: totals.unresolved_disputes, icon: AlertTriangle, color: 'text-warning' },
+          { label: 'Total Workers', value: totals.total_workers as React.ReactNode, icon: Users, color: 'text-navy' },
+          { label: 'Verified', value: totals.verified_workers as React.ReactNode, icon: CheckCircle, color: 'text-success' },
+          { label: 'Total Bookings', value: totals.total_bookings as React.ReactNode, icon: TrendingUp, color: 'text-info' },
+          { label: 'Completed', value: totals.completed_bookings as React.ReactNode, icon: CheckCircle, color: 'text-cooperative' },
+          { label: 'Revenue (₹)', value: `₹${(totals.total_earnings as number || 0).toFixed(0)}` as React.ReactNode, icon: CreditCard, color: 'text-cooperative' },
+          { label: 'Disputes', value: totals.unresolved_disputes as React.ReactNode, icon: AlertTriangle, color: 'text-warning' },
         ].map(({ label, value, icon: Icon, color }) => (
           <div key={label} className="stat-card">
             <div className="flex items-center justify-between mb-1">

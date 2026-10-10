@@ -106,7 +106,7 @@ export default function BookingListPage() {
                   </div>
                   <div className="text-xs text-text-secondary mt-1">
                     Ref: <span className="font-mono">{b.reference as string}</span>
-                    {b.worker_id && <span className="ml-2">• Worker assigned</span>}
+                    {Boolean(b.worker_id) && <span className="ml-2">• Worker assigned</span>}
                   </div>
                 </div>
                 <ChevronRight size={18} className="text-text-secondary flex-shrink-0 mt-1" />
