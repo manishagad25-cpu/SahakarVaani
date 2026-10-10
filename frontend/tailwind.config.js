@@ -1,0 +1,76 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Design tokens
+        navy: {
+          DEFAULT: '#17324D',
+          50: '#E8EDF2',
+          100: '#C5D2DE',
+          200: '#9FB5C8',
+          300: '#7898B2',
+          400: '#527BA0',
+          500: '#17324D',
+          600: '#122843',
+          700: '#0D1E38',
+          800: '#08132D',
+          900: '#030922',
+        },
+        cooperative: {
+          DEFAULT: '#176B4D',
+          50: '#E8F5F0',
+          100: '#C3E5D7',
+          200: '#9CD4BC',
+          300: '#74C4A1',
+          400: '#4CB486',
+          500: '#176B4D',
+          600: '#125940',
+          700: '#0D4733',
+          800: '#083526',
+          900: '#032319',
+        },
+        saffron: {
+          DEFAULT: '#D9822B',
+          50: '#FDF1E6',
+          100: '#F8DBC0',
+          200: '#F3C49A',
+          300: '#EEAD74',
+          400: '#E99650',
+          500: '#D9822B',
+          600: '#B56B22',
+          700: '#905419',
+          800: '#6B3D10',
+          900: '#462607',
+        },
+        surface: '#FFFFFF',
+        background: '#F4F7FA',
+        border: '#DCE3EA',
+        'text-primary': '#1F2937',
+        'text-secondary': '#5B6573',
+        success: '#237A4B',
+        warning: '#A96208',
+        error: '#B42318',
+        info: '#245DA8',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        tamil: ['Noto Sans Tamil', 'sans-serif'],
+      },
+      borderRadius: {
+        card: '10px',
+        btn: '8px',
+      },
+      boxShadow: {
+        card: '0 1px 4px 0 rgba(23,50,77,0.08)',
+        'card-hover': '0 4px 16px 0 rgba(23,50,77,0.14)',
+        nav: '0 2px 8px 0 rgba(23,50,77,0.10)',
+      },
+    },
+  },
+  plugins: [],
+}
